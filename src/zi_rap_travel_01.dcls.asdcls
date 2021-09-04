@@ -1,0 +1,16 @@
+@EndUserText.label: 'Access control for ZI_RAP_Travel_01'
+@MappingRole: true
+define role ZI_RAP_TRAVEL_01 {
+    grant
+        select
+            on
+                ZI_RAP_TRAVEL_01
+                    where
+//                        CurrencyCode = 'EUR'
+//                        and
+//                        ( TravelStatus ) = aspect pfcg_auth(ZOSTAT01, ZOSTAT01, ACTVT = '03')
+//                        or
+                        true // we can't define the authorization on PFCG, that's why this true
+                        ;
+                        
+}
